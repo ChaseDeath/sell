@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SellApplicationTests {
 
-	//git测试
+	//git第二次测试
 	@Test
 	public void contextLoads() {
 	}
