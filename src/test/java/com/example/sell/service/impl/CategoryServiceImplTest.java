@@ -42,6 +42,7 @@ public class CategoryServiceImplTest {
     public void findByCategoryTypeIn() throws Exception {
         List<ProductCategory> list = categoryService.findByCategoryTypeIn(Arrays.asList(1,3));
         for (ProductCategory category : list){
+            //测试
             System.out.println(category.toString());
         }
     }
