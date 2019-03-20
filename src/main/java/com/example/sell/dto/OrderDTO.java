@@ -3,6 +3,8 @@ package com.example.sell.dto;
 import com.example.sell.dataobject.OrderDetail;
 import com.example.sell.enums.OrderStatusEnum;
 import com.example.sell.enums.PayStatusEnum;
+import com.example.sell.utils.serializer.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -41,9 +43,11 @@ public class OrderDTO {
     private Integer payStatus = PayStatusEnum.WAIT.getCode();
 
     /** 创建时间 **/
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date createTime;
 
     /** 更新时间 **/
+    @JsonSerialize(using = DateToLongSerializer.class)
     private Date updateTime;
 
     List<OrderDetail> orderDetailList;
